@@ -12,11 +12,11 @@ def url_markup(videoid, duration, user_id, query, query_type):
                 callback_data=f"slider B|{query_type}|{query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🎵",
+                text="❰𝙋𝙡𝙖𝙮 A𝙪𝙙𝙞𝙤❱",
                 callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="🎥",
+                text="❰𝙋𝙡𝙖𝙮 𝙑𝙞𝙙𝙚𝙤❱",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
@@ -26,12 +26,12 @@ def url_markup(videoid, duration, user_id, query, query_type):
         ],
         [
             InlineKeyboardButton(
-                text="🔎 More Results",
-                callback_data=f"Search {query}|{user_id}",
+                text="❰𝙂𝙧𝙤𝙪𝙥❱",
+                url=f"https://t.me/World_friends_chatting_group",
             ),
             InlineKeyboardButton(
-                text="🗑 Close Search",
-                callback_data=f"forceclose {query}|{user_id}",
+                text="❰𝙊𝙬𝙣𝙚𝙧❱",
+                url=f"https://t.me/ARMY0071",
             ),
         ],
     ]
