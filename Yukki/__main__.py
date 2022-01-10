@@ -326,10 +326,10 @@ async def start_command(_, message):
                 [
                     [
                         InlineKeyboardButton(
-                            text="🎥 Watch Youtube Video", url=f"{link}"
+                            text="❰🎥 𝙒𝙖𝙩𝙘𝙝 𝙔𝙤𝙪𝙩𝙪𝙗𝙚 𝙑𝙞𝙙𝙚𝙤❱", url=f"{link}"
                         ),
                         InlineKeyboardButton(
-                            text="🔄 Close", callback_data="close"
+                            text="❰🔄 𝘾𝙡𝙤𝙨𝙚❱", callback_data="close"
                         ),
                     ],
                 ]
@@ -415,10 +415,10 @@ All commands can be used with: /
             [
                 [
                     InlineKeyboardButton(
-                        text="↪️ Back", callback_data="help_back"
+                        text="❰↪️ 𝘽𝙖𝙘𝙠❱", callback_data="help_back"
                     ),
                     InlineKeyboardButton(
-                        text="🔄 Close", callback_data="close"
+                        text="❰🔄 𝘾𝙡𝙤𝙨𝙚❱", callback_data="close"
                     ),
                 ],
             ]
