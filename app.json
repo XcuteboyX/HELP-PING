@@ -48,8 +48,8 @@
       "value": "",
       "required": true
     },
-    "SUPPORT_CHANNEL": {
-      "description": "Support Channel Link if you have any, Leave blank if no support. Your link must start with https://t.me/",
+    "Owner": {
+      "description": "Support owner Link if you have any, Leave blank if no support. Your link must start with https://t.me/",
       "value": "",
       "required": false
     },
