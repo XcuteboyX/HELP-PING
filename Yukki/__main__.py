@@ -364,21 +364,21 @@ async def start_command(_, message):
 
                         "❰➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋 ➕❱",
 
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                        url=f"https://t.me/musictesting372_bot?startgroup=true",
 
                     )
 
                 ],
 
-                [InlineKeyboardButton("❰𝗕𝗮𝘀𝗶𝗰 𝗚𝘂𝗶𝗱𝗲❱", callback_data="cbhowtouse")],
+                [InlineKeyboardButton("❰𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨❱", callback_data="cbhowtouse")],
 
-                [
+                
 
-                    InlineKeyboardButton("❰𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀❱", callback_data="cbcmds"),
 
-                    InlineKeyboardButton("❰𝗗𝗼𝗻𝗮𝘁𝗲❱", url=f"https://t.me/ARMY0071"),
 
-                ],
+
+
+
 
                 [
 
@@ -487,14 +487,10 @@ All commands can be used with: /
                 [
                     InlineKeyboardButton(
                         "❰➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋 ➕❱",
-                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
+                        url=f"https://t.me/@musictesting372_bot?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❰𝗕𝗮𝘀𝗶𝗰 𝗚𝘂𝗶𝗱𝗲❱", callback_data="cbhowtouse")],
-                [
-                    InlineKeyboardButton("❰𝗖𝗼𝗺𝗺𝗮𝗻𝗱𝘀❱", callback_data="cbcmds"),
-                    InlineKeyboardButton("❰𝗗𝗼𝗻𝗮𝘁𝗲❱", url=f"https://t.me/ARMY0071"),
-                ],
+                [InlineKeyboardButton("❰𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨❱", callback_data="cbhowtouse")],
                 [
                     InlineKeyboardButton(
                         "❰𝗚𝗿𝗼𝘂𝗽❱", url=f"https://t.me/Worldwide_friends_chatting_zonee"
