@@ -63,7 +63,7 @@ async def play(_, message: Message):
                 "**𝗨𝘀𝗮𝗴𝗲:**\n\n/song [𝙔𝙤𝙪𝙏𝙪𝙗𝙚 𝙐𝙍𝙇 𝙤𝙧 𝙈𝙪𝙨𝙞𝙘 𝙉𝙖𝙢𝙚]\n\n𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙨 𝙩𝙝𝙚 𝙥𝙖𝙧𝙩𝙞𝙘𝙪𝙡𝙖𝙧 𝙦𝙪𝙚𝙧𝙮."
             )
             return
-        mystic = await message.reply_text("🔍 Searching Your Query...")
+        mystic = await message.reply_text("🔍 𝗦𝗲𝗮𝗿𝗰𝗵𝗶𝗻𝗴 𝘆𝗼𝘂𝗿 𝗾𝘂𝗲𝗿𝘆...")
         query = message.text.split(None, 1)[1]
         (
             title,
@@ -73,7 +73,7 @@ async def play(_, message: Message):
             videoid,
         ) = await loop.run_in_executor(None, get_yt_info_query, query)
         if str(duration_min) == "None":
-            return await mystic.edit("Sorry! Its a Live Video")
+            return await mystic.edit("𝗦𝗼𝗿𝗿𝘆! 𝗜𝘁𝘀 𝗮 𝗹𝗶𝘃𝗲 𝘃𝗶𝗱𝗲𝗼.")
         await mystic.delete()
         buttons = song_markup(
             videoid, duration_min, message.from_user.id, query, 0
