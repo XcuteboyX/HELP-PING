@@ -59,7 +59,7 @@ async def admin_risghts(_, CallbackQuery):
     command = CallbackQuery.matches[0].group(1)
     if not await is_active_chat(CallbackQuery.message.chat.id):
         return await CallbackQuery.answer(
-            "Nothing is playing on voice chat.", show_alert=True
+            "𝙉𝙤𝙩𝙝𝙞𝙣𝙜 𝙞𝙨 𝙥𝙡𝙖𝙮𝙡𝙞𝙣𝙜 𝙞𝙣 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩.", show_alert=True
         )
     chat_id = CallbackQuery.message.chat.id
     if command == "pausecb":
