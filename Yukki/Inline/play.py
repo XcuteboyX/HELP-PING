@@ -175,7 +175,7 @@ def secondary_markup(videoid, user_id):
             InlineKeyboardButton(
                 text="❰𝙊𝙬𝙣𝙚𝙧❱", url=f"https://t.me/ARMY0071"
             ),
-            InlineKeyboardButton(text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group),
+            InlineKeyboardButton(text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group"),
         ],
     ]
     return buttons
@@ -217,7 +217,7 @@ def primary_markup(videoid, user_id, current_time, total_time):
             InlineKeyboardButton(
                 text="❰𝙊𝙬𝙣𝙚𝙧❱", url=f"https://t.me/ARMY0071"
             ),
-            InlineKeyboardButton(text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group),
+            InlineKeyboardButton(text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group"),
         ],
     ]
     return buttons
@@ -241,7 +241,7 @@ def timer_markup(videoid, user_id, current_time, total_time):
             InlineKeyboardButton(
                 text="❰𝙊𝙬𝙣𝙚𝙧❱", url=f"https://t.me/ARMY0071"
             ),
-            InlineKeyboardButton(text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group),
+            InlineKeyboardButton(text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group"),
         ],
     ]
     return buttons
