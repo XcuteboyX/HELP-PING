@@ -117,7 +117,7 @@ async def admins(_, message: Message):
             await remove_active_chat(chat_id)
             await remove_active_video_chat(chat_id)
             await message.reply_text(
-                "No more music in __Queue__ \n\nLeaving Voice Chat"
+                "𝙉𝙤 𝙢𝙤𝙧𝙚 𝙢𝙪𝙨𝙞𝙘 𝙞𝙣 __Queue__ \n\n𝙇𝙚𝙖𝙫𝙞𝙣𝙜 𝙑𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩."
             )
             await stop_stream(chat_id)
             return
