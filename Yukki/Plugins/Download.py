@@ -88,10 +88,10 @@ def inl_mark(videoid, user_id):
         ],
         [
             InlineKeyboardButton(
-                text="⬅️  Go Back", callback_data=f"good {videoid}|{user_id}"
+                text="𝗚𝗼 𝗯𝗮𝗰𝗸", callback_data=f"good {videoid}|{user_id}"
             ),
             InlineKeyboardButton(
-                text="🗑 Close Menu", callback_data=f"close2"
+                text="𝗖𝗹𝗼𝘀𝗲 𝗺𝗲𝗻𝘂", callback_data=f"close2"
             ),
         ],
     ]
@@ -109,7 +109,7 @@ async def boom(_, CallbackQuery):
     user_id = CallbackQuery.from_user.id
     type, format_id, videoid = callback_request.split("||")
     mystic = await CallbackQuery.edit_message_text(
-        "Download Started\n\nDownloading speed could be slow. Please hold on..",
+        "𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱 𝘀𝘁𝗮𝗿𝘁𝗲𝗱\n\n𝗗𝗼𝘄𝗻𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝘀𝗼𝗲𝗲𝗱 𝗰𝗼𝘂𝗹𝗱 𝗯𝗲 𝘀𝗹𝗼𝘄. 𝗣𝗹𝗲𝗮𝘀𝗲 𝗵𝗼𝗹𝗱 𝗼𝗻..",
         reply_markup=inl,
     )
     yturl = f"https://www.youtube.com/watch?v={videoid}"
@@ -236,7 +236,7 @@ async def boom(_, CallbackQuery):
 
 def p_mark(link, channel):
     buttons = [
-        [InlineKeyboardButton(text="Watch on Youtube", url=f"{link}")],
+        [InlineKeyboardButton(text="𝗪𝗮𝘁𝗰𝗵 𝗼𝗻 𝘆𝗼𝘂𝘁𝘂𝗯𝗲", url=f"{link}")],
     ]
     return buttons
 
@@ -245,7 +245,7 @@ async def send_file(
     CallbackQuery, med, filename, videoid, user_id, link, channel
 ):
     await CallbackQuery.edit_message_text(
-        "Upload Started\n\nUploading speed could be slow. Please hold on..",
+        "𝗨𝗽𝗹𝗼𝗮𝗱 𝘀𝘁𝗮𝗿𝘁𝗲𝗱\n\n𝗨𝗽𝗹𝗼𝗮𝗱𝗶𝗻𝗴 𝘀𝗽𝗲𝗲𝗱 𝗰𝗼𝘂𝗹𝗱 𝗯𝗲 𝘀𝗹𝗼𝘄. 𝗣𝗹𝗲𝗮𝘀𝗲 𝗵𝗼𝗹𝗱 𝗼𝗻..",
         reply_markup=upl,
     )
     try:
@@ -304,7 +304,7 @@ def duration(vid_file_path):
             if "duration" in s:
                 return float(s["duration"])
 
-    raise Exception("duration Not found")
+    raise Exception("𝗗𝘂𝗿𝗮𝘁𝗶𝗼𝗻 𝗻𝗼𝘁 𝗳𝗼𝘂𝗻𝗱")
 
 
 async def downloadvideocli(command_to_exec):
