@@ -101,7 +101,7 @@ async def admin_risghts(_, CallbackQuery):
         await remove_active_video_chat(chat_id)
         await stop_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"🎧 Voicechat End/Stopped by {CallbackQuery.from_user.mention}!",
+            f"🎧 𝙑𝙤𝙞𝙘𝙚𝙘𝙝𝙖𝙩 𝙀𝙣𝙙/𝙨𝙩𝙤𝙥𝙥𝙚𝙙 𝙗𝙮 {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
