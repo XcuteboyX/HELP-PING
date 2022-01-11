@@ -70,7 +70,7 @@ async def admin_risghts(_, CallbackQuery):
         await music_off(chat_id)
         await pause_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"🎧 Voicechat Paused by {CallbackQuery.from_user.mention}!",
+            f"🎧 𝙑𝙤𝙞𝙘𝙚𝙘𝙝𝙖𝙩 𝙋𝙖𝙪𝙨𝙚𝙙 𝙗𝙮 {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
@@ -78,12 +78,12 @@ async def admin_risghts(_, CallbackQuery):
     if command == "resumecb":
         if await is_music_playing(chat_id):
             return await CallbackQuery.answer(
-                "Music is already Resumed.", show_alert=True
+                "𝙈𝙪𝙨𝙞𝙘 𝙞𝙨 𝙖𝙡𝙧𝙚𝙖𝙙𝙮 𝙧𝙚𝙨𝙪𝙢𝙚𝙙.", show_alert=True
             )
         await music_on(chat_id)
         await resume_stream(chat_id)
         await CallbackQuery.message.reply_text(
-            f"🎧 Voicechat Resumed by {CallbackQuery.from_user.mention}!",
+            f"🎧 𝙑𝙤𝙞𝙘𝙚𝙘𝙝𝙖𝙩 𝙧𝙚𝙨𝙪𝙢𝙚𝙙 𝙗𝙮 {CallbackQuery.from_user.mention}!",
             reply_markup=audio_markup2,
         )
         await CallbackQuery.message.delete()
@@ -116,7 +116,7 @@ async def admin_risghts(_, CallbackQuery):
             await remove_active_chat(chat_id)
             await remove_active_video_chat(chat_id)
             await CallbackQuery.message.reply_text(
-                f"No more music in __Queue__ \n\nLeaving Voice Chat..Button Used By :- {CallbackQuery.from_user.mention}"
+                f"𝙉𝙤 𝙢𝙤𝙧𝙚 𝙢𝙪𝙨𝙞𝙘 𝙞𝙣 __Queue__ \n\n𝙇𝙚𝙖𝙫𝙞𝙣𝙜 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩..𝘽𝙪𝙩𝙩𝙤𝙣 𝙪𝙨𝙚𝙙 𝙗𝙮 :- {CallbackQuery.from_user.mention}"
             )
             await stop_stream(chat_id)
             await CallbackQuery.message.delete()
@@ -263,7 +263,7 @@ async def admin_risghts(_, CallbackQuery):
                     "Skipped! Playlist Playing....", show_alert=True
                 )
                 mystic = await CallbackQuery.message.reply_text(
-                    f"**{MUSIC_BOT_NAME} Playlist Function**\n\n__Downloading Next Music From Playlist....__\n\nButton Used By :- {CallbackQuery.from_user.mention}"
+                    f"**{MUSIC_BOT_NAME} 𝙋𝙡𝙖𝙮𝙡𝙞𝙨𝙩 𝙛𝙪𝙣𝙘𝙩𝙞𝙤𝙣**\n\n__𝘿𝙤𝙬𝙣𝙡𝙤𝙖𝙙𝙞𝙣𝙜 𝙣𝙚𝙭𝙩 𝙢𝙪𝙨𝙞𝙘 𝙛𝙧𝙤𝙢 𝙥𝙡𝙖𝙮𝙡𝙞𝙨𝙩....__\n\n𝘽𝙪𝙩𝙩𝙤𝙣 𝙪𝙨𝙚𝙙 𝙗𝙮 :- {CallbackQuery.from_user.mention}"
                 )
                 (
                     title,
@@ -419,7 +419,7 @@ async def play_playlist(_, CallbackQuery):
                 raw_path = await convert(downloaded_file)
                 if not await join_stream(chat_id, raw_path):
                     return await mystic.edit(
-                        "Error Joining Voice Chat. Make sure Voice Chat is Enabled."
+                        "𝙀𝙧𝙧𝙤𝙧 𝙟𝙤𝙞𝙣𝙞𝙣𝙜 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩. 𝙈𝙖𝙠𝙚 𝙨𝙪𝙧𝙚 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩 𝙞𝙨 𝙚𝙣𝙖𝙗𝙡𝙚𝙙."
                     )
                 theme = await check_theme(chat_id)
                 chat_title = await specialfont_to_normal(chat_title)
@@ -511,7 +511,7 @@ async def group_playlist(_, CallbackQuery):
     _count = await get_playlist_names(user_id, genre)
     if not _count:
         sex = await CallbackQuery.message.reply_text(
-            f"Welcome To {MUSIC_BOT_NAME}'s Playlist Feature.\n\nGenerating Your  Playlist In Database...Please wait.\n\nGenre:- {genre}"
+            f"𝙒𝙚𝙡𝙘𝙤𝙢𝙚 𝙩𝙤 {MUSIC_BOT_NAME}'s 𝙋𝙡𝙖𝙡𝙞𝙨𝙩 𝙛𝙚𝙖𝙩𝙪𝙧𝙚.\n\n𝙂𝙚𝙣𝙚𝙧𝙖𝙩𝙞𝙣𝙜 𝙮𝙤𝙪𝙧 𝙥𝙡𝙖𝙮𝙡𝙞𝙨𝙩 𝙞𝙣 𝙙𝙖𝙩𝙖𝙗𝙖𝙨𝙚...𝙋𝙡𝙚𝙖𝙨𝙚 𝙬𝙖𝙞𝙩.\n\n𝙂𝙚𝙣𝙧𝙚:- {genre}"
         )
         await asyncio.sleep(2)
         await sex.delete()
