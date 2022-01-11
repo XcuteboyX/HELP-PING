@@ -69,7 +69,7 @@ async def quality_markup(_, CallbackQuery):
     if not limit:
         await CallbackQuery.message.delete()
         return await CallbackQuery.message.reply_text(
-            "**No Limit Defined for Video Calls**\n\nSet a Limit for Number of Maximum Video Calls allowed on Bot by /set_video_limit [Sudo Users Only]"
+            "**𝙉𝙤 𝙇𝙞𝙢𝙞𝙩 𝘿𝙚𝙛𝙞𝙣𝙚𝙙 𝙛𝙤𝙧 𝙑𝙞𝙙𝙚𝙤 𝘾𝙖𝙡𝙡𝙨**\n\n𝙎𝙚𝙩 𝙖 𝙇𝙞𝙢𝙞𝙩 𝙛𝙤𝙧 𝙉𝙪𝙢𝙗𝙚𝙧 𝙤𝙛 𝙈𝙖𝙭𝙞𝙢𝙪𝙢 𝙑𝙞𝙙𝙚𝙤 𝘾𝙖𝙡𝙡𝙨 𝙖𝙡𝙡𝙤𝙬𝙚𝙙 𝙤𝙣 𝘽𝙤𝙩 𝙗𝙮 /set_video_limit [𝙎𝙪𝙙𝙤 𝙐𝙨𝙚𝙧𝙨 𝙊𝙣𝙡𝙮]"
         )
     count = len(await get_active_video_chats())
     if int(count) == int(limit):
@@ -113,7 +113,7 @@ async def Live_Videos_Stream(_, CallbackQuery):
     if not limit:
         await CallbackQuery.message.delete()
         return await CallbackQuery.message.reply_text(
-            "**No Limit Defined for Video Calls**\n\nSet a Limit for Number of Maximum Video Calls allowed on Bot by /set_video_limit [Sudo Users Only]"
+            "**𝙉𝙤 𝙇𝙞𝙢𝙞𝙩 𝘿𝙚𝙛𝙞𝙣𝙚𝙙 𝙛𝙤𝙧 𝙑𝙞𝙙𝙚𝙤 𝘾𝙖𝙡𝙡𝙨**\n\n𝙎𝙚𝙩 𝙖 𝙇𝙞𝙢𝙞𝙩 𝙛𝙤𝙧 𝙉𝙪𝙢𝙗𝙚𝙧 𝙤𝙛 𝙈𝙖𝙭𝙞𝙢𝙪𝙢 𝙑𝙞𝙙𝙚𝙤 𝘾𝙖𝙡𝙡𝙨 𝙖𝙡𝙡𝙤𝙬𝙚𝙙 𝙤𝙣 𝘽𝙤𝙩 𝙗𝙮 /set_video_limit [𝙎𝙪𝙙𝙤 𝙐𝙨𝙚𝙧𝙨 𝙊𝙣𝙡𝙮]"
         )
     count = len(await get_active_video_chats())
     if int(count) == int(limit):
@@ -144,7 +144,7 @@ async def Live_Videos_Stream(_, CallbackQuery):
     nrs, ytlink = await get_m3u8(videoid)
     if nrs == 0:
         return await CallbackQuery.message.reply_text(
-            "Video Formats not Found.."
+            "𝗩𝗶𝗱𝗲𝗼 𝗳𝗼𝗿𝗺𝗮𝘁𝘀 𝗻𝗼𝘁 𝗳𝗼𝘂𝗻𝗱.."
         )
     await start_live_stream(
         CallbackQuery,
@@ -190,7 +190,7 @@ async def Videos_Stream(_, CallbackQuery):
     nrs, ytlink = await get_m3u8(videoid)
     if nrs == 0:
         return await CallbackQuery.message.reply_text(
-            "Video Formats not Found.."
+            "𝗩𝗶𝗱𝗲𝗼 𝗳𝗼𝗿𝗺𝗮𝘁𝘀 𝗻𝗼𝘁 𝗳𝗼𝘂𝗻𝗱.."
         )
     await start_video_stream(
         CallbackQuery,
