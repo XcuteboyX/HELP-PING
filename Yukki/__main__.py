@@ -14,7 +14,7 @@ from config import (LOG_GROUP_ID, LOG_SESSION, STRING1, STRING2, STRING3,
                     STRING4, STRING5)
 from Yukki import (ASS_CLI_1, ASS_CLI_2, ASS_CLI_3, ASS_CLI_4, ASS_CLI_5,
                    ASSID1, ASSID2, ASSID3, ASSID4, ASSID5, ASSNAME1, ASSNAME2,
-                   ASSNAME3, ASSNAME4, ASSNAME5, BOT_ID, BOT_NAME, LOG_CLIENT,
+                   ASSNAME3, ASSNAME4, ASSNAME5, BOT_ID, BOT_USERNAME, BOT_NAME, LOG_CLIENT,
                    OWNER_ID, app)
 from Yukki.Core.Clients.cli import LOG_CLIENT
 from Yukki.Core.PyTgCalls.Yukki import (pytgcalls1, pytgcalls2, pytgcalls3,
@@ -364,7 +364,7 @@ async def start_command(_, message):
 
                         "❰➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋 ➕❱",
 
-                        url=f"https://t.me/musictesting372_bot?startgroup=true",
+                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
 
                     )
 
@@ -487,7 +487,7 @@ All commands can be used with: /
                 [
                     InlineKeyboardButton(
                         "❰➕ 𝘼𝘿𝘿 𝙈𝙀 𝙏𝙊 𝙔𝙊𝙐𝙍 𝙂𝙍𝙊𝙐𝙋 ➕❱",
-                        url=f"https://t.me/@musictesting372_bot?startgroup=true",
+                        url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
                 [InlineKeyboardButton("❰𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨❱", url=f"https://telegra.ph/Commands-01-10-2")],
