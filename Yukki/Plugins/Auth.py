@@ -33,7 +33,7 @@ async def auth(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "Reply to a user's message or give username/user_id."
+                "𝙍𝙚𝙥𝙡𝙮 𝙩𝙤 𝙪𝙨𝙚𝙧𝙨 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙤𝙧 𝙜𝙞𝙫𝙚 𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 𝙤𝙧 𝙪𝙨𝙚𝙧 𝙄𝘿."
             )
             return
         user = message.text.split(None, 1)[1]
