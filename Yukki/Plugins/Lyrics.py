@@ -81,7 +81,7 @@ async def lyricssex(_, CallbackQuery):
 @app.on_message(filters.command("lyrics"))
 async def lrsearch(_, message: Message):
     if len(message.command) < 2:
-        return await message.reply_text("**Usage:**\n\n/lyrics [ Music Name]")
+        return await message.reply_text("**𝙐𝙨𝙖𝙜𝙚:**\n\n/lyrics [ 𝙈𝙪𝙨𝙞𝙘 𝙉𝙖𝙢𝙚]")
     m = await message.reply_text("Searching Lyrics")
     query = message.text.split(None, 1)[1]
     x = "OXaVabSRKQLqwpiYOn-E4Y7k3wj-TNdL5RfDPXlnXhCErbcqVvdCF-WnMR5TBctI"
