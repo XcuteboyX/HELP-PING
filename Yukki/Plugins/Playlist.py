@@ -72,7 +72,7 @@ async def play_playlist_cmd(_, message):
             hmo = await message.reply_photo(
                 photo=thumb,
                 caption=(
-                    f"**{MUSIC_BOT_NAME}'s Playlist Feature**\nSelect the Playlist you want to play!.\n\nYou can play someone else's playlist too:-\n- /playplaylist [Username]\n- /playplaylist [USER ID](if user has deleted acc)\n- /playplaylist [Reply to a User]"
+                    f"**{MUSIC_BOT_NAME}'s 𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝗳𝗲𝗮𝘁𝘂𝗿𝗲**\n𝗦𝗲𝗹𝗲𝗰𝘁 𝘁𝗵𝗲 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗽𝗹𝗮𝘆!.\n\n𝗬𝗼𝘂 𝗰𝗮𝗻 𝗽𝗹𝗮𝘆 𝘀𝗼𝗺𝗲 𝗼𝗻𝗲 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁'𝘀 𝘁𝗼𝗼-\n- /playplaylist [Username]\n- /playplaylist [USER ID](if user has deleted acc)\n- /playplaylist [Reply to a User]"
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
@@ -84,7 +84,7 @@ async def play_playlist_cmd(_, message):
             await message.reply_photo(
                 photo=thumb,
                 caption=(
-                    f"**{MUSIC_BOT_NAME}'s Playlist Feature**\nSelect the Playlist you want to play!.\n\nYou can play someone else's playlist too:-\n- /playplaylist [Username]\n- /playplaylist [USER ID](if user has deleted acc)\n- /playplaylist [Reply to a User]"
+                    f"**{MUSIC_BOT_NAME}'s 𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝗳𝗲𝗮𝘁𝘂𝗿𝗲**\n𝗦𝗲𝗹𝗲𝗰𝘁 𝘁𝗵𝗲 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗽𝗹𝗮𝘆!.\n\n𝗬𝗼𝘂 𝗰𝗮𝗻 𝗽𝗹𝗮𝘆 𝘀𝗼𝗻𝗲 𝗼𝗻𝗲 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁'𝘀 𝘁𝗼𝗼:-\n- /playplaylist [Username]\n- /playplaylist [USER ID](if user has deleted acc)\n- /playplaylist [Reply to a User]"
                 ),
                 reply_markup=InlineKeyboardMarkup(buttons),
             )
@@ -100,7 +100,7 @@ async def play_playlist_cmd(_, message):
         hmo = await message.reply_photo(
             photo=thumb,
             caption=(
-                f"**{MUSIC_BOT_NAME}'s Playlist Feature**\nSelect the Playlist you want to play!.\n\nYou can play someone else's playlist too:-\n- /playplaylist [Username]\n- /playplaylist [USER ID](if user has deleted acc)\n- /playplaylist [Reply to a User]"
+                f"**{MUSIC_BOT_NAME}'s 𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝗳𝗲𝗮𝘁𝘂𝗿𝗲**\n𝗦𝗲𝗹𝗲𝗰𝘁 𝘁𝗵𝗲 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝘆𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 𝗽𝗹𝗮𝘆!.\n\n𝗬𝗼𝘂 𝗰𝗮𝗻 𝗽𝗹𝗮𝘆 𝘀𝗼𝗻𝗲 𝗼𝗻𝗲 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁'𝘀 𝘁𝗼𝗼:-\n- /playplaylist [Username]\n- /playplaylist [USER ID](if user has deleted acc)\n- /playplaylist [Reply to a User]"
             ),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
@@ -119,7 +119,7 @@ async def playlist(_, message):
     await message.reply_photo(
         photo=thumb,
         caption=(
-            f"**{MUSIC_BOT_NAME}'s Playlist Feature**\n\nSelect The Playlist, You want to **check!**"
+            f"**{MUSIC_BOT_NAME}'s 𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝗳𝗲𝗮𝘁𝘂𝗿𝗲**\n\n𝗦𝗲𝗹𝗲𝗰𝘁 𝘁𝗵𝗲 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁, 𝗬𝗼𝘂 𝘄𝗮𝗻𝘁 𝘁𝗼 **check!**"
         ),
         reply_markup=InlineKeyboardMarkup(buttons),
     )
@@ -243,7 +243,7 @@ async def delgroupplaylist(_, message):
         _playlist = await get_playlist_names(message.chat.id, genre)
     if not _playlist:
         await message.reply_text(
-            f"You have no Playlist on {MUSIC_BOT_NAME}'s Server"
+            f"𝗬𝗼𝘂 𝗵𝗮𝘃𝗲 𝗻𝗼 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁 𝗼𝗻 {MUSIC_BOT_NAME}'s 𝗦𝗲𝗿𝘃𝗲𝗿."
         )
     else:
         titlex = []
@@ -256,13 +256,13 @@ async def delgroupplaylist(_, message):
                 deleted = await delete_playlist(message.chat.id, note, genre)
                 if deleted:
                     return await message.reply_text(
-                        f"**Deleted the {count} music in group's playlist**"
+                        f"**𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝘁𝗵𝗲 {count} 𝗺𝘂𝘀𝗶𝗰 𝗶𝗻 𝗴𝗿𝗼𝘂𝗽'𝘀 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁.**"
                     )
                 else:
                     return await message.reply_text(
-                        f"**No such saved music in Group playlist.**"
+                        f"**𝗡𝗼 𝘀𝘂𝗰𝗸 𝘀𝗮𝘃𝗲𝗱 𝗺𝘂𝘀𝗶𝗰 𝗶𝗻 𝗴𝗿𝗼𝘂𝗽'𝘀 𝗣𝗹𝗮𝘆𝗹𝗶𝘀𝘁.**"
                     )
-        await message.reply_text("You have no such music in Playlist.")
+        await message.reply_text("𝗬𝗼𝘂 𝗵𝗮𝘃𝗲 𝗻𝗼 𝘀𝘂𝗰𝗵 𝗺𝘂𝘀𝗶𝗰 𝗶𝗻 𝗽𝗹𝗮𝘆𝗹𝗶𝘀𝘁.")
 
 
 @app.on_callback_query(filters.regex(pattern=r"show_genre"))
