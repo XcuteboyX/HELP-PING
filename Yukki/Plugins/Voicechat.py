@@ -70,7 +70,7 @@ async def timer_checkup_markup(_, CallbackQuery):
         return await CallbackQuery.answer(f"𝙉𝙤𝙩 𝙋𝙡𝙖𝙮𝙞𝙣𝙜.", show_alert=True)
     else:
         return await CallbackQuery.answer(
-            f"No Active Voice Chat", show_alert=True
+            f"𝙉𝙤 𝙖𝙘𝙩𝙞𝙫𝙚 𝙑𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩", show_alert=True
         )
 
 
