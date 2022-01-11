@@ -54,7 +54,7 @@ async def useradd(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "Reply to a user's message or give username/user_id."
+                "𝙍𝙚𝙥𝙡𝙮 𝙩𝙤 𝙖 𝙪𝙨𝙚𝙧𝙨 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙤𝙧 𝙜𝙞𝙫𝙚 𝙪𝙚𝙧𝙣𝙖𝙢𝙚 𝙤𝙧 𝙪𝙨𝙚𝙧 𝙄𝙙 𝙩𝙤 𝙥𝙚𝙧𝙛𝙤𝙧𝙢 𝙩𝙝𝙞𝙨 𝙖𝙘𝙩𝙞𝙤𝙣."
             )
             return
         user = message.text.split(None, 1)[1]
@@ -63,12 +63,12 @@ async def useradd(_, message: Message):
         user = await app.get_users(user)
         if user.id in SUDOERS:
             return await message.reply_text(
-                f"{user.mention} is already a sudo user."
+                f"{user.mention} 𝙄𝙨 𝙖𝙡𝙧𝙚𝙖𝙙𝙮 𝙖 𝙨𝙪𝙙𝙤 𝙪𝙨𝙚𝙧."
             )
         added = await add_sudo(user.id)
         if added:
             await message.reply_text(
-                f"Added **{user.mention}** to Sudo Users."
+                f"𝘼𝙙𝙙𝙚𝙙 **{user.mention}** 𝙩𝙤 𝙨𝙪𝙙𝙤 𝙪𝙨𝙚𝙧𝙨."
             )
             os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
         else:
@@ -81,7 +81,7 @@ async def useradd(_, message: Message):
     added = await add_sudo(message.reply_to_message.from_user.id)
     if added:
         await message.reply_text(
-            f"Added **{message.reply_to_message.from_user.mention}** to Sudo Users"
+            f"𝘼𝙙𝙙𝙚𝙙 **{message.reply_to_message.from_user.mention}** 𝙩𝙤 𝙨𝙪𝙙𝙤 𝙪𝙨𝙚𝙧𝙨"
         )
         os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
     else:
@@ -94,7 +94,7 @@ async def userdel(_, message: Message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "Reply to a user's message or give username/user_id."
+                "𝙍𝙚𝙥𝙡𝙮 𝙩𝙤 𝙖 𝙪𝙨𝙚𝙧𝙨 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙤𝙧 𝙜𝙞𝙫𝙚 𝙪𝙚𝙧𝙣𝙖𝙢𝙚 𝙤𝙧 𝙪𝙨𝙚𝙧 𝙄𝙙 𝙩𝙤 𝙥𝙚𝙧𝙛𝙤𝙧𝙢 𝙩𝙝𝙞𝙨 𝙖𝙘𝙩𝙞𝙤𝙣."
             )
             return
         user = message.text.split(None, 1)[1]
@@ -107,31 +107,31 @@ async def userdel(_, message: Message):
         removed = await remove_sudo(user.id)
         if removed:
             await message.reply_text(
-                f"Removed **{user.mention}** from {MUSIC_BOT_NAME}'s Sudo."
+                f"𝙍𝙚𝙢𝙤𝙫𝙚𝙙 **{user.mention}** 𝙛𝙧𝙤𝙢 {MUSIC_BOT_NAME}'s 𝙎𝙪𝙙𝙤."
             )
             return os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
-        await message.reply_text(f"Something wrong happened.")
+        await message.reply_text(f"𝙎𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙬𝙧𝙤𝙣𝙜 𝙝𝙖𝙥𝙥𝙚𝙣𝙚𝙙.")
         return
     from_user_id = message.from_user.id
     user_id = message.reply_to_message.from_user.id
     mention = message.reply_to_message.from_user.mention
     if user_id not in SUDOERS:
         return await message.reply_text(
-            f"Not a part of {MUSIC_BOT_NAME}'s Sudo."
+            f"𝙉𝙤𝙩 𝙖 𝙥𝙖𝙧𝙩 𝙤𝙛 {MUSIC_BOT_NAME}'s 𝙎𝙪𝙙𝙤."
         )
     removed = await remove_sudo(user_id)
     if removed:
         await message.reply_text(
-            f"Removed **{mention}** from {MUSIC_BOT_NAME}'s Sudo."
+            f"𝙍𝙚𝙢𝙤𝙫𝙚𝙙 **{mention}** 𝙛𝙧𝙤𝙢 {MUSIC_BOT_NAME}'s 𝙎𝙪𝙙𝙤."
         )
         return os.system(f"kill -9 {os.getpid()} && python3 -m Yukki")
-    await message.reply_text(f"Something wrong happened.")
+    await message.reply_text(f"𝙎𝙤𝙢𝙚𝙩𝙝𝙞𝙣𝙜 𝙬𝙧𝙤𝙣𝙜 𝙝𝙖𝙥𝙥𝙚𝙣𝙚𝙙.")
 
 
 @app.on_message(filters.command("sudolist"))
 async def sudoers_list(_, message: Message):
     sudoers = await get_sudoers()
-    text = "⭐️<u> **Owners:**</u>\n"
+    text = "⭐️<u> **𝙊𝙬𝙣𝙚𝙧𝙨:**</u>\n"
     sex = 0
     for x in OWNER_ID:
         try:
@@ -149,7 +149,7 @@ async def sudoers_list(_, message: Message):
                 user = user.first_name if not user.mention else user.mention
                 if smex == 0:
                     smex += 1
-                    text += "\n⭐️<u> **Sudo Users:**</u>\n"
+                    text += "\n⭐️<u> **𝙎𝙪𝙙𝙤 𝙪𝙨𝙚𝙧𝙨:**</u>\n"
                 sex += 1
                 text += f"{sex}➤ {user}\n"
             except Exception:
@@ -169,7 +169,7 @@ async def sudoers_list(_, message: Message):
 )
 async def set_video_limit_kid(_, message: Message):
     if len(message.command) != 2:
-        usage = "**Usage:**\n/set_video_limit [Number of chats allowed]"
+        usage = "**𝙐𝙨𝙖𝙜𝙚:**\n/set_video_limit [𝙉𝙪𝙢𝙗𝙚𝙧 𝙤𝙛 𝙘𝙝𝙖𝙩𝙨 𝙖𝙡𝙡𝙤𝙬𝙚𝙙.]"
         return await message.reply_text(usage)
     chat_id = message.chat.id
     state = message.text.split(None, 1)[1].strip()
@@ -181,7 +181,7 @@ async def set_video_limit_kid(_, message: Message):
         )
     await set_video_limit(141414, limit)
     await message.reply_text(
-        f"Video Calls Maximum Limit Defined to {limit} Chats."
+        f"𝙑𝙞𝙙𝙚𝙤 𝙘𝙖𝙡𝙡 𝙢𝙖𝙭𝙞𝙢𝙞𝙢𝙪𝙢 𝙡𝙞𝙢𝙞𝙩𝙨 𝙙𝙚𝙛𝙞𝙣𝙚𝙙 𝙩𝙤 {limit} 𝘾𝙝𝙖𝙩𝙨."
     )
 
 
@@ -242,7 +242,7 @@ async def logger(_, message):
 async def ban_globally(_, message):
     if not message.reply_to_message:
         if len(message.command) < 2:
-            await message.reply_text("**Usage:**\n/gban [USERNAME | USER_ID]")
+            await message.reply_text("**𝙐𝙨𝙖𝙜𝙚:**\n/gban [𝙪𝙨𝙚𝙧𝙣𝙖𝙢𝙚 | 𝙐𝙨𝙚𝙧 𝙄𝘿]")
             return
         user = message.text.split(None, 2)[1]
         if "@" in user:
@@ -351,7 +351,7 @@ async def unban_globally(_, message):
     if not message.reply_to_message:
         if len(message.command) != 2:
             await message.reply_text(
-                "**Usage:**\n/ungban [USERNAME | USER_ID]"
+                "**𝙐𝙨𝙚𝙧𝙣𝙖𝙢𝙚:**\n/ungban [𝙐𝙨𝙚𝙧𝙣𝙖𝙢𝙚 | 𝙐𝙨𝙚𝙧 𝙄𝘿]"
             )
             return
         user = message.text.split(None, 1)[1]
@@ -424,12 +424,12 @@ async def broadcast_message_pin_silent(_, message):
             except Exception:
                 pass
         await message.reply_text(
-            f"**Broadcasted Message In {sent}  Chats with {pin} Pins.**"
+            f"**𝘽𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩𝙚𝙙 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙞𝙣 {sent}  𝘾𝙝𝙖𝙩𝙨 𝙒𝙞𝙩𝙝 {pin} 𝙋𝙞𝙣𝙨.**"
         )
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            "**𝙐𝙨𝙖𝙜𝙚**:\n/broadcast [𝙈𝙚𝙨𝙨𝙖𝙜𝙚] 𝙊𝙧 [𝙍𝙚𝙥𝙡𝙮𝙏𝙤 𝘼 𝙈𝙚𝙨𝙨𝙖𝙜𝙚]"
         )
         return
     text = message.text.split(None, 1)[1]
@@ -452,7 +452,7 @@ async def broadcast_message_pin_silent(_, message):
         except Exception:
             pass
     await message.reply_text(
-        f"**Broadcasted Message In {sent} Chats and {pin} Pins.**"
+        f"**𝘽𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩𝙚𝙙 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙞𝙣 {sent}  𝘾𝙝𝙖𝙩𝙨 𝙒𝙞𝙩𝙝 {pin} 𝙋𝙞𝙣𝙨.**"
     )
 
 
@@ -482,12 +482,12 @@ async def broadcast_message_pin_loud(_, message):
             except Exception:
                 pass
         await message.reply_text(
-            f"**Broadcasted Message In {sent}  Chats with {pin} Pins.**"
+            f"**𝘽𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩𝙚𝙙 𝙢𝙚𝙨𝙨𝙖𝙜𝙚 𝙞𝙣 {sent}  𝘾𝙝𝙖𝙩𝙨 𝙒𝙞𝙩𝙝 {pin} 𝙋𝙞𝙣𝙨.**"
         )
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            "**𝙐𝙨𝙖𝙜𝙚**:\n/broadcast [𝙈𝙚𝙨𝙨𝙖𝙜𝙚] 𝙊𝙧 [𝙍𝙚𝙥𝙡𝙮𝙏𝙤 𝘼 𝙈𝙚𝙨𝙨𝙖𝙜𝙚]"
         )
         return
     text = message.text.split(None, 1)[1]
@@ -533,11 +533,11 @@ async def broadcast(_, message):
                 sent += 1
             except Exception:
                 pass
-        await message.reply_text(f"**Broadcasted Message In {sent} Chats.**")
+        await message.reply_text(f"**𝘽𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩𝙚𝙙 𝙢𝙚𝙨𝙨𝙖𝙜𝙚𝙨 𝙞𝙣 {sent} 𝘾𝙝𝙖𝙩𝙨.**")
         return
     if len(message.command) < 2:
         await message.reply_text(
-            "**Usage**:\n/broadcast [MESSAGE] or [Reply to a Message]"
+            "**𝙐𝙨𝙖𝙜𝙚**:\n/broadcast [𝙈𝙚𝙨𝙨𝙖𝙜𝙚] 𝙤𝙧 [𝙍𝙚𝙥𝙡𝙮 𝙩𝙤 𝙖 𝙢𝙚𝙨𝙨𝙖𝙜𝙚]"
         )
         return
     text = message.text.split(None, 1)[1]
@@ -553,7 +553,7 @@ async def broadcast(_, message):
             sent += 1
         except Exception:
             pass
-    await message.reply_text(f"**Broadcasted Message In {sent} Chats.**")
+    await message.reply_text(f"𝘽𝙧𝙤𝙖𝙙𝙘𝙖𝙨𝙩𝙚𝙙 𝙢𝙚𝙨𝙨𝙖𝙜𝙚𝙨 𝙞𝙣 {sent} 𝘾𝙝𝙖𝙩𝙨.")
 
 
 # Clean
