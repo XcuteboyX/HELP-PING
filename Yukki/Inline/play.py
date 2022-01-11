@@ -12,11 +12,11 @@ def url_markup(videoid, duration, user_id, query, query_type):
                 callback_data=f"slider B|{query_type}|{query}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="❰𝙋𝙡𝙖𝙮 A𝙪𝙙𝙞𝙤❱",
+                text="🎵",
                 callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="❰𝙋𝙡𝙖𝙮 𝙑𝙞𝙙𝙚𝙤❱",
+                text="🎥",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
@@ -42,11 +42,11 @@ def url_markup2(videoid, duration, user_id):
     buttons = [
         [
             InlineKeyboardButton(
-                text="❰𝙋𝙡𝙖𝙮 A𝙪𝙙𝙞𝙤❱",
+                text="🎵",
                 callback_data=f"MusicStream {videoid}|{duration}|{user_id}",
             ),
             InlineKeyboardButton(
-                text="❰𝙋𝙡𝙖𝙮 𝙑𝙞𝙙𝙚𝙤❱",
+                text="🎥",
                 callback_data=f"Choose {videoid}|{duration}|{user_id}",
             ),
         ],
@@ -173,9 +173,9 @@ def secondary_markup(videoid, user_id):
         ],
         [
             InlineKeyboardButton(
-                text="❰🔗 𝙈𝙤𝙧𝙚 𝙈𝙚𝙣𝙪❱", callback_data=f"other {videoid}|{user_id}"
+                text="❰𝙊𝙬𝙣𝙚𝙧❱", url=f"https://t.me/ARMY0071"
             ),
-            InlineKeyboardButton(text="❰🗑 𝗖𝗹𝗼𝘀𝗲❱", callback_data=f"close"),
+            InlineKeyboardButton(text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group),
         ],
     ]
     return buttons
@@ -215,9 +215,9 @@ def primary_markup(videoid, user_id, current_time, total_time):
         ],
         [
             InlineKeyboardButton(
-                text="❰🔗 𝙈𝙤𝙧𝙚 𝙈𝙚𝙣𝙪❱", callback_data=f"other {videoid}|{user_id}"
+                text="❰𝙊𝙬𝙣𝙚𝙧❱", url=f"https://t.me/ARMY0071"
             ),
-            InlineKeyboardButton(text="❰🗑 𝗖𝗹𝗼𝘀𝗲❱", callback_data=f"close"),
+            InlineKeyboardButton(text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group),
         ],
     ]
     return buttons
@@ -239,9 +239,9 @@ def timer_markup(videoid, user_id, current_time, total_time):
         ],
         [
             InlineKeyboardButton(
-                text="❰🔗 𝙈𝙤𝙧𝙚 𝙈𝙚𝙣𝙪❱", callback_data=f"other {videoid}|{user_id}"
+                text="❰𝙊𝙬𝙣𝙚𝙧❱", url=f"https://t.me/ARMY0071"
             ),
-            InlineKeyboardButton(text="❰🗑 𝗖𝗹𝗼𝘀𝗲❱", callback_data=f"close"),
+            InlineKeyboardButton(text="❰𝙂𝙧𝙤𝙪𝙥❱", url=f"https://t.me/World_friends_chatting_group),
         ],
     ]
     return buttons
