@@ -370,7 +370,7 @@ async def start_command(_, message):
 
                 ],
 
-                [InlineKeyboardButton("❰𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨❱", url=f"https://t.me/ARMY0071")],
+                [InlineKeyboardButton("❰𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨❱", url=f"https://telegra.ph/Commands-01-10-2")],
 
                 
 
@@ -384,7 +384,7 @@ async def start_command(_, message):
 
                     InlineKeyboardButton(
 
-                        "❰𝗚𝗿𝗼𝘂𝗽❱", url=f"https://t.me/Worldwide_friends_chatting_zonee"
+                        "❰𝗚𝗿𝗼𝘂𝗽❱", url=f"https://t.me/World_friends_chatting_group"
 
                     ),
 
@@ -490,10 +490,10 @@ All commands can be used with: /
                         url=f"https://t.me/@musictesting372_bot?startgroup=true",
                     )
                 ],
-                [InlineKeyboardButton("❰𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨❱", url=f"https://t.me/ARMY0071")],
+                [InlineKeyboardButton("❰𝘾𝙤𝙢𝙢𝙖𝙣𝙙𝙨❱", url=f"https://telegra.ph/Commands-01-10-2")],
                 [
                     InlineKeyboardButton(
-                        "❰𝗚𝗿𝗼𝘂𝗽❱", url=f"https://t.me/Worldwide_friends_chatting_zonee"
+                        "❰𝗚𝗿𝗼𝘂𝗽❱", url=f"https://t.me/World_friends_chatting_group"
                     ),
                     InlineKeyboardButton(
                         "❰𝗢𝘄𝗻𝗲𝗿❱", url=f"https://t.me/ARMY0071"
