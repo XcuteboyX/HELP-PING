@@ -83,7 +83,7 @@ async def welcome(_, message: Message):
                 return await remove_active_chat(chat_id)
             if member.id in OWNER_ID:
                 return await message.reply_text(
-                    f"{MUSIC_BOT_NAME}'s Owner[{member.mention}] has just joined your chat."
+                    f"{MUSIC_BOT_NAME}'s 𝗢𝘄𝗻𝗲𝗿[{member.mention}] 𝗵𝗮𝘀 𝗷𝘂𝘀𝘁 𝗷𝗼𝗶𝗻𝗲𝗱 𝘆𝗼𝘂𝗿 𝗰𝗵𝗮𝘁."
                 )
             if member.id in SUDOERS:
                 return await message.reply_text(
@@ -101,7 +101,7 @@ async def useradd(_, message: Message):
     await asyncio.gather(
         message.delete(),
         message.reply_text(
-            f"Thanks for having me in {message.chat.title}.\n{MUSIC_BOT_NAME} is alive.\n\nFor any assistance or help, checkout our support group and channel.",
+            f"𝙏𝙝𝙖𝙣𝙠𝙨 𝙛𝙤𝙧 𝙝𝙖𝙫𝙞𝙣𝙜 𝙢𝙚 𝙞𝙣 {message.chat.title}.\n{MUSIC_BOT_NAME} 𝗶𝘀 𝗮𝗹𝗶𝘃𝗲.\n\n𝙁𝙤𝙧 𝙖𝙣𝙮 𝙖𝙨𝙨𝙞𝙨𝙩𝙖𝙣𝙘𝙚 𝙤𝙧 𝙝𝙚𝙡𝙥, 𝙘𝙝𝙚𝙘𝙠𝙤𝙪𝙩 𝙤𝙪𝙧 𝙨𝙪𝙥𝙥𝙤𝙧 𝗴𝗿𝗼𝘂𝗽.",
             reply_markup=InlineKeyboardMarkup(out[1]),
         ),
     )
@@ -278,7 +278,7 @@ async def start_markup_check(_, CallbackQuery):
             await Yukki.pytgcalls.change_volume_call(c_id, volume)
             await CallbackQuery.answer("Setting Audio Changes ...")
         except:
-            return await CallbackQuery.answer("No active Group Call...")
+            return await CallbackQuery.answer("𝗡𝗼 𝗮𝗰𝘁𝗶𝘃𝗲 𝗚𝗿𝗼𝘂𝗽 𝗖𝗮𝗹𝗹...")
         await save_start(c_id, "assistant", assis)
         text, buttons = volmarkup()
         await CallbackQuery.edit_message_text(
