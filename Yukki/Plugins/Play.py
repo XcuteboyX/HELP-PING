@@ -111,7 +111,7 @@ async def play(_, message: Message):
         limit = await get_video_limit(141414)
         if not limit:
             return await message.reply_text(
-                "**No Limit Defined for Video Calls**\n\nSet a Limit for Number of Maximum Video Calls allowed on Bot by /set_video_limit [Sudo Users Only]"
+                "**𝗡𝗼 𝗹𝗶𝗺𝗶𝘁 𝗱𝗲𝗳𝗶𝗻𝗲𝗱 𝗳𝗼𝗿 𝘃𝗶𝗱𝗲𝗼 𝗰𝗮𝗹𝗹𝘀**\n\n𝗦𝗲𝘁 𝗮 𝗹𝗶𝗺𝗶𝘁 𝗼𝗳 𝗺𝗮𝘅𝗶𝗺𝘂𝗺 𝗻𝘂𝗺𝗯𝗲𝗿 𝗼𝗳 𝘃𝗶𝗱𝗲𝗼 𝗰𝗮𝗹𝗹 𝗮𝗹𝗹𝗼𝘄𝗲𝗱 𝗯𝘆 𝗯𝗼𝘁 𝗯𝘆/set_video_limit [Sudo Users Only]"
             )
         count = len(await get_active_video_chats())
         if int(count) == int(limit):
