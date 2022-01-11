@@ -8,19 +8,19 @@ from Yukki import BOT_USERNAME
 def setting_markup2():
     buttons = [
         [
-            InlineKeyboardButton(text="🔈 Audio Quality", callback_data="AQ"),
-            InlineKeyboardButton(text="🎚 Audio Volume", callback_data="AV"),
+            InlineKeyboardButton(text="❰𝘼𝙪𝙙𝙞𝙤 𝙌𝙪𝙖𝙡𝙞𝙩𝙮❱", callback_data="AQ"),
+            InlineKeyboardButton(text="❰𝘼𝙪𝙙𝙞𝙤 𝙑𝙤𝙡𝙪𝙢𝙚❱", callback_data="AV"),
         ],
         [
             InlineKeyboardButton(
-                text="👥 Authorized Users", callback_data="AU"
+                text="❰𝘼𝙪𝙩𝙝𝙤𝙧𝙞𝙯𝙚𝙙 𝙐𝙨𝙚𝙧𝙨❱", callback_data="AU"
             ),
             InlineKeyboardButton(
-                text="💻 Dashboard", callback_data="Dashboard"
+                text="❰𝘿𝙖𝙨𝙝𝙗𝙤𝙖𝙧𝙙❱", callback_data="Dashboard"
             ),
         ],
         [
-            InlineKeyboardButton(text="✖️ Close", callback_data="close"),
+            InlineKeyboardButton(text="❰𝗖𝗹𝗼𝘀𝗲❱", callback_data="close"),
         ],
     ]
     return f"🔧  **{MUSIC_BOT_NAME} Settings**", buttons
@@ -187,20 +187,20 @@ def private_panel():
 def setting_markup():
     buttons = [
         [
-            InlineKeyboardButton(text="🔈 Audio Quality", callback_data="AQ"),
-            InlineKeyboardButton(text="🎚 Audio Volume", callback_data="AV"),
+            InlineKeyboardButton(text="❰𝘼𝙪𝙙𝙞𝙤 𝙌𝙪𝙖𝙡𝙞𝙩𝙮❱", callback_data="AQ"),
+            InlineKeyboardButton(text="❰𝘼𝙪𝙙𝙞𝙤 𝙑𝙤𝙡𝙪𝙢𝙚❱", callback_data="AV"),
         ],
         [
             InlineKeyboardButton(
-                text="👥 Authorized Users", callback_data="AU"
+                text="❰𝘼𝙪𝙙𝙞𝙤 𝙑𝙤𝙡𝙪𝙢𝙚❱", callback_data="AU"
             ),
             InlineKeyboardButton(
-                text="💻 Dashboard", callback_data="Dashboard"
+                text="❰𝘿𝙖𝙨𝙝𝙗𝙤𝙖𝙧𝙙❱", callback_data="Dashboard"
             ),
         ],
         [
-            InlineKeyboardButton(text="✖️ Close", callback_data="close"),
-            InlineKeyboardButton(text="🔙 Go Back", callback_data="okaybhai"),
+            InlineKeyboardButton(text="❰𝗖𝗹𝗼𝘀𝗲❱", callback_data="close"),
+            InlineKeyboardButton(text="❰𝙂𝙤 𝙗𝙖𝙘𝙠❱", callback_data="okaybhai"),
         ],
     ]
     return f"🔧  **{MUSIC_BOT_NAME} Settings**", buttons
