@@ -30,7 +30,7 @@ Only for Sudo Users.
 async def blacklist_chat_func(_, message: Message):
     if len(message.command) != 2:
         return await message.reply_text(
-            "**Usage:**\n/blacklistchat [CHAT_ID]"
+            "**𝗨𝘀𝗮𝗴𝗲:**\n/blacklistchat [CHAT_ID]"
         )
     chat_id = int(message.text.strip().split()[1])
     if chat_id in await blacklisted_chats():
@@ -38,7 +38,7 @@ async def blacklist_chat_func(_, message: Message):
     blacklisted = await blacklist_chat(chat_id)
     if blacklisted:
         return await message.reply_text(
-            "Chat has been successfully blacklisted"
+            "𝗖𝗵𝗮𝘁 𝗵𝗮𝘀 𝗯𝗲𝗲𝗻 𝘀𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 𝗯𝗹𝗮𝗰𝗸𝗹𝗶𝘀𝘁𝗲𝗱"
         )
     await message.reply_text("Something wrong happened, check logs.")
 
@@ -47,7 +47,7 @@ async def blacklist_chat_func(_, message: Message):
 async def whitelist_chat_func(_, message: Message):
     if len(message.command) != 2:
         return await message.reply_text(
-            "**Usage:**\n/whitelistchat [CHAT_ID]"
+            "**𝗨𝘀𝗮𝗴𝗲:**\n/whitelistchat [CHAT_ID]"
         )
     chat_id = int(message.text.strip().split()[1])
     if chat_id not in await blacklisted_chats():
@@ -55,7 +55,7 @@ async def whitelist_chat_func(_, message: Message):
     whitelisted = await whitelist_chat(chat_id)
     if whitelisted:
         return await message.reply_text(
-            "Chat has been successfully whitelisted"
+            "𝘾𝙝𝙖𝙩 𝙝𝙖𝙨 𝙗𝙚𝙚𝙣 𝙨𝙪𝙘𝙘𝙚𝙨𝙨𝙛𝙪𝙡𝙡𝙮 𝙬𝙝𝙞𝙩𝙚𝙡𝙞𝙨𝙩𝙚𝙙"
         )
     await message.reply_text("Something wrong happened, check logs.")
 
