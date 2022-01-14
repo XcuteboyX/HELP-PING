@@ -116,12 +116,12 @@ async def admin_risghts(_, CallbackQuery):
             await remove_active_chat(chat_id)
             await remove_active_video_chat(chat_id)
             await CallbackQuery.message.reply_text(
-                f"𝙉𝙤 𝙢𝙤𝙧𝙚 𝙢𝙪𝙨𝙞𝙘 𝙞𝙣 __Queue__ \n\n𝙇𝙚𝙖𝙫𝙞𝙣𝙜 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩..𝘽𝙪𝙩𝙩𝙤𝙣 𝙪𝙨𝙚𝙙 𝙗𝙮 :- {CallbackQuery.from_user.mention}"
+                f"𝙉𝙤 𝙢𝙤𝙧𝙚 𝙢𝙪𝙨𝙞𝙘 𝙞𝙣 __𝙌𝙪𝙚𝙪𝙚__ \n\n𝙇𝙚𝙖𝙫𝙞𝙣𝙜 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩..𝘽𝙪𝙩𝙩𝙤𝙣 𝙪𝙨𝙚𝙙 𝙗𝙮 :- {CallbackQuery.from_user.mention}"
             )
             await stop_stream(chat_id)
             await CallbackQuery.message.delete()
             await CallbackQuery.answer(
-                "Skipped. No more music in Queue", show_alert=True
+                "𝙎𝙠𝙞𝙥𝙥𝙚𝙙. 𝙉𝙤 𝙢𝙤𝙧𝙚 𝙢𝙪𝙨𝙞𝙘 𝙞𝙣 𝙦𝙪𝙚𝙪𝙚", show_alert=True
             )
             return
         else:
@@ -167,7 +167,7 @@ async def admin_risghts(_, CallbackQuery):
                 final_output = await CallbackQuery.message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__</b> {title} \n⏳<b>__Duration:__</b> {duration_min} \n👤<b>__Requested by:__ </b> {mention}",
+                    caption=f"<b>__𝙎𝙠𝙞𝙥𝙥𝙚𝙙 𝙑𝙤𝙞𝙘𝙚 𝘾𝙝𝙖𝙩__</b>\n\n🎥<b>__𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙋𝙡𝙖𝙮𝙞𝙣𝙜:__</b> {title} \n⏳<b>__𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣:__</b> {duration_min} \n👤<b>__𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮:__ </b> {mention}",
                 )
                 await start_timer(
                     videoid,
@@ -182,7 +182,7 @@ async def admin_risghts(_, CallbackQuery):
                 afk = videoid
                 await CallbackQuery.answer()
                 mystic = await CallbackQuery.message.reply_text(
-                    "Skipped! Please Wait Changing Video Stream...."
+                    "𝙎𝙠𝙞𝙥𝙥𝙚𝙙! 𝙋𝙡𝙚𝙖𝙨𝙚 𝙬𝙖𝙞𝙩 𝙘𝙝𝙖𝙣𝙜𝙞𝙣𝙜 𝙫𝙞𝙙𝙚𝙤 𝙨𝙩𝙧𝙚𝙖𝙢...."
                 )
                 read = (str(videoid)).replace("s1s_", "", 1)
                 s = read.split("_+_")
@@ -204,7 +204,7 @@ async def admin_risghts(_, CallbackQuery):
                         photo="Utils/Telegram.JPEG",
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n👤**__Requested by:__** {mention}"
+                            f"<b>__𝙎𝙠𝙞𝙥𝙥𝙚𝙙 𝙑𝙞𝙙𝙚𝙤 𝘾𝙝𝙖𝙩__</b>\n\n👤**__𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮:__** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -244,7 +244,7 @@ async def admin_risghts(_, CallbackQuery):
                         photo=thumb,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n🎥<b>__Started Video Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n👤**__Requested by:__** {mention}"
+                            f"<b>__𝙎𝙠𝙞𝙥𝙥𝙚𝙙 𝙑𝙞𝙙𝙚𝙤 𝙘𝙝𝙖𝙩__</b>\n\n🎥<b>__𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙫𝙞𝙙𝙚𝙤 𝙥𝙡𝙖𝙮𝙞𝙣𝙜:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n👤**__𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝙗𝙮:__** {mention}"
                         ),
                     )
                     os.remove(thumb)
@@ -302,7 +302,7 @@ async def admin_risghts(_, CallbackQuery):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} Mins\n👤**__Requested by:__** {mention}"
+                        f"<b>__𝙎𝙠𝙞𝙥𝙥𝙚𝙙 𝙑𝙤𝙞𝙘𝙚 𝘾𝙝𝙖𝙩__</b>\n\n🎥<b>__𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙋𝙡𝙖𝙮𝙞𝙣𝙜:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣:__</b> {duration_min} Mins\n👤**__𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝘽𝙮:__** {mention}"
                     ),
                 )
                 os.remove(thumb)
