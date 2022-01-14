@@ -23,11 +23,11 @@ def playlist_markup(user_name, user_id, videoid):
     buttons = [
         [
             InlineKeyboardButton(
-                text=f"Group's Playlist",
+                text=f"❰𝙂𝙧𝙤𝙪𝙥'𝙨 𝙥𝙡𝙖𝙮𝙡𝙞𝙨𝙩❱",
                 callback_data=f"show_genre {user_id}|Group|{videoid}",
             ),
             InlineKeyboardButton(
-                text=f"{user_name[:8]}'s Playlist",
+                text=f"❰{user_name[:8]}'𝙨 𝙋𝙡𝙖𝙮𝙡𝙞𝙨𝙩❱",
                 callback_data=f"show_genre {user_id}|Personal|{videoid}",
             ),
         ],
