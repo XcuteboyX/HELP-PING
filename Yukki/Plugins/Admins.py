@@ -74,11 +74,11 @@ async def admins(_, message: Message):
     if not len(message.command) == 1:
         return await message.reply_text("Error! Wrong Usage of Command.")
     if not await is_active_chat(message.chat.id):
-        return await message.reply_text("Nothing is playing on voice chat.")
+        return await message.reply_text("𝙉𝙤𝙩𝙝𝙞𝙣𝙜 𝙞𝙨 𝙥𝙡𝙖𝙮𝙞𝙣𝙜 𝙤𝙣 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩.")
     chat_id = message.chat.id
     if message.command[0][1] == "a":
         if not await is_music_playing(message.chat.id):
-            return await message.reply_text("Music is already Paused.")
+            return await message.reply_text("𝙈𝙪𝙨𝙞𝙘 𝙞𝙨 𝙖𝙡𝙧𝙚𝙖𝙙𝙮 𝙥𝙖𝙪𝙨𝙚𝙙.")
         await music_off(chat_id)
         await pause_stream(chat_id)
         await message.reply_text(
@@ -86,7 +86,7 @@ async def admins(_, message: Message):
         )
     if message.command[0][1] == "e":
         if await is_music_playing(message.chat.id):
-            return await message.reply_text("Music is already Playing.")
+            return await message.reply_text("𝙈𝙪𝙨𝙞𝙘 𝙞𝙨 𝙖𝙡𝙧𝙚𝙖𝙙𝙮 𝙥𝙡𝙖𝙮𝙞𝙣𝙜.")
         await music_on(chat_id)
         await resume_stream(chat_id)
         await message.reply_text(
@@ -117,7 +117,7 @@ async def admins(_, message: Message):
             await remove_active_chat(chat_id)
             await remove_active_video_chat(chat_id)
             await message.reply_text(
-                "𝙉𝙤 𝙢𝙤𝙧𝙚 𝙢𝙪𝙨𝙞𝙘 𝙞𝙣 __Queue__ \n\n𝙇𝙚𝙖𝙫𝙞𝙣𝙜 𝙑𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩."
+                "𝙉𝙤 𝙢𝙤𝙧𝙚 𝙢𝙪𝙨𝙞𝙘 𝙞𝙣 __𝙌𝙪𝙚𝙪𝙚__ \n\n𝙇𝙚𝙖𝙫𝙞𝙣𝙜 𝙑𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩."
             )
             await stop_stream(chat_id)
             return
@@ -162,7 +162,7 @@ async def admins(_, message: Message):
                 final_output = await message.reply_photo(
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
-                    caption=f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__</b> {title} \n⏳<b>__Duration:__</b> {duration_min} \n👤<b>__Requested by:__ </b> {mention}",
+                    caption=f"<b>__𝙎𝙠𝙞𝙥𝙥𝙚𝙙 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩__</b>\n\n🎥<b>__𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙥𝙡𝙖𝙮𝙞𝙣𝙜:__</b> {title} \n⏳<b>__𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣:__</b> {duration_min} \n👤<b>__𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝙗𝙮:__ </b> {mention}",
                 )
                 await start_timer(
                     videoid,
@@ -175,7 +175,7 @@ async def admins(_, message: Message):
                 )
             elif str(finxx) == "s1s":
                 mystic = await message.reply_text(
-                    "Skipped.. Changing to next Video Stream."
+                    "𝙎𝙠𝙞𝙥𝙥𝙚𝙙... 𝙘𝙝𝙖𝙣𝙜𝙞𝙣𝙜 𝙩𝙤 𝙣𝙚𝙬 𝙫𝙞𝙙𝙚𝙤 𝙨𝙩𝙧𝙚𝙖𝙢."
                 )
                 afk = videoid
                 read = (str(videoid)).replace("s1s_", "", 1)
@@ -187,7 +187,7 @@ async def admins(_, message: Message):
                         await skip_video_stream(chat_id, videoid, 720, mystic)
                     except Exception as e:
                         return await mystic.edit(
-                            f"Error while changing video stream.\n\nPossible Reason:- {e}"
+                            f"𝙀𝙧𝙧𝙤𝙧 𝙬𝙝𝙞𝙡𝙚 𝙘𝙝𝙖𝙣𝙜𝙞𝙣𝙜 𝙫𝙞𝙙𝙚𝙤 𝙨𝙩𝙧𝙚𝙖𝙢.\n\n𝙋𝙤𝙨𝙨𝙞𝙗𝙡𝙚 𝙧𝙚𝙖𝙨𝙤𝙣:- {e}"
                         )
                     buttons = secondary_markup2("Smex1", message.from_user.id)
                     mention = db_mem[afk]["username"]
@@ -196,7 +196,7 @@ async def admins(_, message: Message):
                         photo="Utils/Telegram.JPEG",
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n👤**__Requested by:__** {mention}"
+                            f"<b>__𝙎𝙠𝙞𝙥𝙥𝙚𝙙 𝙫𝙞𝙙𝙚𝙤 𝙘𝙝𝙖𝙩__</b>\n\n👤**__𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝙗𝙮:__** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -218,7 +218,7 @@ async def admins(_, message: Message):
                         )
                     except Exception as e:
                         return await mystic.edit(
-                            f"Error while changing video stream.\n\nPossible Reason:- {e}"
+                            f"𝙀𝙧𝙧𝙤𝙧 𝙬𝙝𝙞𝙡𝙚 𝙘𝙝𝙖𝙣𝙜𝙞𝙣𝙜 𝙫𝙞𝙙𝙚𝙤 𝙨𝙩𝙧𝙚𝙖𝙢.\n\n𝙋𝙤𝙨𝙨𝙞𝙗𝙡𝙚 𝙧𝙚𝙖𝙨𝙤𝙣:- {e}"
                         )
                     theme = await check_theme(chat_id)
                     c_title = message.chat.title
@@ -236,7 +236,7 @@ async def admins(_, message: Message):
                         photo=thumb,
                         reply_markup=InlineKeyboardMarkup(buttons),
                         caption=(
-                            f"<b>__Skipped Video Chat__</b>\n\n🎥<b>__Started Video Playing:__ </b> [{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n👤**__Requested by:__** {mention}"
+                            f"<b>__𝙎𝙠𝙞𝙥𝙥𝙚𝙙 𝙫𝙞𝙙𝙚𝙤 𝙘𝙝𝙖𝙩__</b>\n\n🎥<b>__𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙫𝙞𝙙𝙚𝙤 𝙥𝙡𝙖𝙮𝙞𝙣𝙜:__ </b> [{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n👤**__𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝙗𝙮:__** {mention}"
                         ),
                     )
                     await mystic.delete()
@@ -282,7 +282,7 @@ async def admins(_, message: Message):
                     photo=thumb,
                     reply_markup=InlineKeyboardMarkup(buttons),
                     caption=(
-                        f"<b>__Skipped Voice Chat__</b>\n\n🎥<b>__Started Playing:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__Duration:__</b> {duration_min} Mins\n👤**__Requested by:__** {mention}"
+                        f"<b>__𝙎𝙠𝙞𝙥𝙥𝙚𝙙 𝙫𝙤𝙞𝙘𝙚 𝙘𝙝𝙖𝙩__</b>\n\n🎥<b>__𝙎𝙩𝙖𝙧𝙩𝙚𝙙 𝙥𝙡𝙖𝙮𝙞𝙣𝙜:__ </b>[{title[:25]}](https://www.youtube.com/watch?v={videoid}) \n⏳<b>__𝘿𝙪𝙧𝙖𝙩𝙞𝙤𝙣:__</b> {duration_min} Mins\n👤**__𝙍𝙚𝙦𝙪𝙚𝙨𝙩𝙚𝙙 𝙗𝙮:__** {mention}"
                     ),
                 )
                 os.remove(thumb)
