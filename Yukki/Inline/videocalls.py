@@ -58,9 +58,13 @@ def stream_quality_markup(videoid, duration, user_id):
         ],
         [
             InlineKeyboardButton(
+                text="❰Go Back❱",
+                callback_data=f"gback_list_chose_stream {videoid}|{duration}|{user_id}",
+            ),
+            InlineKeyboardButton(
                 text="❰𝘾𝙡𝙤𝙨𝙚 𝙨𝙚𝙖𝙧𝙘𝙝❱",
                 callback_data=f"forceclose {videoid}|{user_id}",
-            )
+            ),
         ],
     ]
     return buttons
