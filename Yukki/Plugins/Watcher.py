@@ -34,9 +34,9 @@ async def chat_watcher_func(_, message):
     checking = f"[{message.from_user.first_name}](tg://user?id={message.from_user.id})"
     if await is_gbanned_user(userid):
         try:
-            await message.chat.kick_member(userid)
+            await message.chat.ban_member(userid)
         except Exception:
             return
         await message.reply_text(
-            f"{checking} 𝙞𝙨 𝙜𝙡𝙤𝙗𝙖𝙡𝙡𝙮 𝙗𝙖𝙣𝙣𝙚𝙙 𝙗𝙮 𝙎𝙪𝙙𝙤 𝙐𝙨𝙚𝙧𝙨 𝙖𝙣𝙙 𝙝𝙖𝙨 𝙗𝙚𝙚𝙣 𝙠𝙞𝙘𝙠𝙚𝙙 𝙤𝙪𝙩 𝙤𝙛 𝙩𝙝𝙚 𝙘𝙝𝙖𝙩..\n\n**𝙋𝙤𝙨𝙨𝙞𝙗𝙡𝙚 𝙧𝙚𝙖𝙨𝙤𝙣:** 𝙋𝙤𝙩𝙚𝙣𝙩𝙞𝙖𝙡 𝙎𝙥𝙖𝙢𝙢𝙚𝙧 𝙖𝙣𝙙 𝘼𝙗𝙪𝙨𝙚𝙧."
+            f"{checking} is globally banned by Sudo Users and has been kicked out of the chat.\n\n**Possible Reason:** Potential Spammer and Abuser."
         )
