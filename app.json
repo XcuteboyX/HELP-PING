@@ -28,11 +28,6 @@
       "value": "",
       "required": true
     },
-    "BOT_USERNAME": {
-      "description": "Your bot username without @",
-      "value": "",
-      "required": true
-    },
     "DURATION_LIMIT": {
       "description": "Duration Limit for Playout (In Mins).. Example: 60",
       "value": "60",
@@ -53,8 +48,8 @@
       "value": "",
       "required": true
     },
-    "Owner": {
-      "description": "Support owner Link if you have any, Leave blank if no support. Your link must start with https://t.me/",
+    "SUPPORT_CHANNEL": {
+      "description": "Support Channel Link if you have any, Leave blank if no support. Your link must start with https://t.me/",
       "value": "",
       "required": false
     },
@@ -110,12 +105,17 @@
     },
     "SUDO_USERS": {
       "description": "The user id(s) of user(s) whom you would like to add as a SUDO. Multiple values shall be seperated with a space.",
-      "value": "652625078 1890117013",
+      "value": "",
+      "required": true
+    },
+    "LOG_SESSION": {
+      "description": "A Pyrogram String Session for LOGGING or u can also add STRING_SESSION1 Also.",
+      "value": "",
       "required": true
     },
     "UPSTREAM_REPO": {
       "description": "If you dont know this, Leave as it is",
-      "value": "https://github.com/Itzharshit/YukkiMusicBot",
+      "value": "https://github.com/NotReallyShikhar/YukkiMusicBot",
       "required": true
     },
     "UPSTREAM_BRANCH": {
